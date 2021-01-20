@@ -53,7 +53,7 @@ export default {
           this.fadeInImg('vtop'+this.imgCounter)
         }})
         .add(gsap.to(classTag,{opacity: 1, duration: 2}))
-        .add(gsap.to(classTag,{opacity: 1, duration: 2})) // もっとスマートに待ち時間を実装したい
+        .add(gsap.to(classTag,{opacity: 1, duration: 4})) // もっとスマートに待ち時間を実装したい
     },
     fadeOutImg(className) {
       const classTag = '.'+className
