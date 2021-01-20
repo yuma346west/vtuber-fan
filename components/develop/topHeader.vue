@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       imgPath: '/top/top',
-      extention: '.jpeg'
+      extension: '.jpeg'
     }
   },
   computed: {
@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     getImagePath () {
-      return this.imgPath + this.imgCounter + this.extention
+      return this.imgPath + this.imgCounter + this.extension
     },
     // 画像フェードイン/アウトアニメーション演出
     // TODO ホットリロードでアニメーションが崩壊するのであとで調べる
@@ -52,13 +52,13 @@ export default {
           this.$store.dispatch('topHeader/count')
           this.fadeInImg('vtop'+this.imgCounter)
         }})
-        .add(gsap.to(classTag, 2, {opacity: 1}))
-        .add(gsap.to(classTag, 4, {opacity: 1})) // もっとスマートに待ち時間を実装したい
+        .add(gsap.to(classTag,{opacity: 1, duration: 2}))
+        .add(gsap.to(classTag,{opacity: 1, duration: 4})) // もっとスマートに待ち時間を実装したい
     },
     fadeOutImg(className) {
       const classTag = '.'+className
       gsap.timeline()
-        .add(gsap.to(classTag, 2, {opacity: 0}))
+        .add(gsap.to(classTag,{opacity: 0, duration: 2}))
     }
   }
 }
