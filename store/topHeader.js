@@ -13,7 +13,7 @@ export const mutations = {
 
 export const actions = {
     count ({state, commit}) {
-        if (state.imgCounter == 3) {
+        if (state.imgCounter === 3) {
             commit('reset')
         } else {
             commit('increment')
