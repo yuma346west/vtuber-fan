@@ -54,6 +54,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: '開発中',
           to: '/develop'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: '水滴アニメ',
+          to: '/development/dropWater'
         }
       ],
     }

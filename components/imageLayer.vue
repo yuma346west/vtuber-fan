@@ -18,6 +18,7 @@
 <style scoped>
 .content {
   position: relative;
+  height: 100%;
 }
 .layered {
   position: absolute;
